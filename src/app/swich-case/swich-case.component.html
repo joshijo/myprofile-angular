@@ -1,0 +1,58 @@
+<div class="container-fluid bg-warning ">
+  <h1 class="h1 text-center ">NGSWITCH</h1>
+
+<div class="row btn-group" role="group" aria-label="Basic mixed styles example" >
+  
+
+<button
+  class="btn btn-primary"
+  [ngClass]="{ active: item == 'foodItem' }"
+  (click)="item = 'foodItem'" >Food</button>
+
+
+
+<button
+  type="button"
+  class="btn btn-success"
+  [ngClass]="{ active: item == 'countries' }"
+  (click)="item = 'countries'">  country
+
+
+</button>
+<button
+  type="button"
+  class="btn btn-primary"
+  [ngClass]="{ active: item == 'flowers' }"
+  (click)="item = 'flowers'">flower
+
+  
+</button>
+
+</div>
+</div>
+<div [ngSwitch]="item">
+  <div *ngSwitchCase="'foodItem'">
+    <img src="/src/assets/food.jpg" alt="">
+    <h3>dhosa</h3>
+    <h3>poori</h3>
+    <h3>idly</h3>
+    <h3>aapam</h3>
+    <h3>biriyani</h3>
+  </div>
+
+  <div *ngSwitchCase="'countries'">
+    <h3>India</h3>
+    <h3>America</h3>
+    <h3>Africa</h3>
+    <h3>southy</h3>
+    <h3>australiya</h3>
+  </div>
+
+  <div *ngSwitchCase="'flowers'">
+    <h3>rose</h3>
+    <h3>lotus</h3>
+    <h3>marigold</h3>
+    <h3>Jasmin</h3>
+    <h3>lilly</h3>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="cart"><h1>🛒Shopping Cart</h1>
+    <p>cart item:{{cartStatus}}</p>
+<button type= "button" class="btn btn-primary"(click)="add()"[disabled]="cartStatus==10">Add-item</button> <br><br>
+
+<P *ngIf="cartStatus==10">max limit 10 only</P>
+<button type= "button" class="btn btn-success"(click)="remove()"[disabled]="cartStatus==0">remove-item</button>
+<p *ngIf="!cartStatus">minimum add 1 product</p></div>

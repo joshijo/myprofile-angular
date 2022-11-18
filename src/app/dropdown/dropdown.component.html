@@ -1,0 +1,47 @@
+<div class="conainer bg-success m-5 ">
+  <h1 class="display-1 text-center"> mountains</h1>
+
+
+  <div class="row mb-5 pb-5">
+    <select (change)="setvalue($event)" class="form-select w-75 mx-auto" aria-label="Default select example">
+      <option selected>know more about mountain</option>
+      <option value="Volcanic Mountains">Volcanic Mountains</option>
+      <option value="Fold Mountains">Fold Mountains</option>
+      <option value="Block Mountains">Block Mountains</option>
+      <option value="Residual Mountains">Residual Mountains</option>
+     
+    </select>
+  </div>
+</div>
+  <div [ngSwitch]="mountainList">
+    <div *ngSwitchCase="'Volcanic Mountains'">
+      <p>Volcanic mountains are a special class of mountains. 
+        A volcano is a vent or opening through which magma, ash,
+        gases, and water vapour are ejected out</p>
+      <img src="../../assets/images/valcano.jpg" alt="">
+    </div>
+     <div *ngSwitchCase="'Fold Mountains'">
+<p>
+  Fold mountains are formed by the effects of folding on layers
+   within the upper part of the Earth's crust. Before the development
+    of the theory of plate ...
+</p>
+<img src="../../assets/images/FoldedmountainIMP.jpg" alt="">
+    </div>
+    <div *ngSwitchCase="'Block Mountains'">
+<p>Block mountains are formed due to upward movement of middle block between 
+  two normal faults .
+   The up-thrown block is also called as horst. </p>
+<img src="../../assets/images/block mountain.jpg.crdownload"alt="" height="200px" width="200px">
+    </div>
+    <div *ngSwitchCase="'Residual Mountains'">
+    <p>Residual mountains are the remnants of previously existing
+       mountains that have been subjected to weathering and erosion 
+       for an extended period. The residual mountains 
+      owe their current shape to erosion by rivers, glaciers, wind,</p>
+    <img src="../../assets/dome-mountain.jpg" alt="">
+    </div>
+    
+    
+  </div>
+
